@@ -127,7 +127,7 @@ impl HashAlg {
         match *self {
             Mean => (width, height),
             Blockhash => panic!("Blockhash algorithm does not resize"),
-            Gradient => (width + 1, height),
+            Gradient => (width + 1, height + 1),
             VertGradient => (width, height + 1),
             DoubleGradient => (width / 2 + 1, height / 2 + 1),
             __Nonexhaustive => panic!("not a real hash algorithm"),
